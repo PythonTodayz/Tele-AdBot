@@ -20,6 +20,7 @@ async def init_db():
     await db.target_groups.create_index([("user_id", 1)])
     await db.auto_reply_logs.create_index([("account_id", 1), ("created_at", -1)])
     await db.group_join_logs.create_index([("account_id", 1), ("created_at", -1)])
+    await db.dm_replied_users.create_index([("account_id", 1), ("user_id", 1)])
 
 async def get_db():
     global db
@@ -79,7 +80,8 @@ async def create_user(user_id: int, username: str = None, first_name: str = None
         "auto_reply_text": config.AUTO_REPLY_TEXT,
         "auto_group_join_enabled": False,
         "target_mode": "all",
-        "selected_groups": []
+        "selected_groups": [],
+        "saved_message_id": None
     }
     await database.users.insert_one(user)
     return user
@@ -116,7 +118,8 @@ async def create_account(user_id: int, phone: str, api_id: str, api_hash: str):
         "phone_code_hash": None,
         "account_first_name": None,
         "account_last_name": None,
-        "account_username": None
+        "account_username": None,
+        "saved_message_id": None
     }
     result = await database.telegram_accounts.insert_one(account)
     account["_id"] = result.inserted_id
@@ -253,3 +256,31 @@ async def get_groups_joined_count(account_id):
     if isinstance(account_id, str):
         account_id = ObjectId(account_id)
     return await database.group_join_logs.count_documents({"account_id": account_id})
+
+async def has_replied_to_user(account_id, user_id: int) -> bool:
+    database = await get_db()
+    if isinstance(account_id, str):
+        account_id = ObjectId(account_id)
+    existing = await database.dm_replied_users.find_one({
+        "account_id": account_id,
+        "user_id": user_id
+    })
+    return existing is not None
+
+async def mark_user_replied(account_id, user_id: int, username: str = None):
+    database = await get_db()
+    if isinstance(account_id, str):
+        account_id = ObjectId(account_id)
+    existing = await database.dm_replied_users.find_one({
+        "account_id": account_id,
+        "user_id": user_id
+    })
+    if not existing:
+        await database.dm_replied_users.insert_one({
+            "account_id": account_id,
+            "user_id": user_id,
+            "username": username,
+            "replied_at": datetime.utcnow()
+        })
+        return True
+    return False

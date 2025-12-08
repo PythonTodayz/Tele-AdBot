@@ -31,7 +31,7 @@ def accounts_menu_keyboard():
 
 def support_keyboard():
     keyboard = [
-        [InlineKeyboardButton("👨‍💻 Admin", url="tg://user?id=7756391784")],
+        [InlineKeyboardButton("👨‍💻 Admin", url="https://t.me/dojutso")],
         [InlineKeyboardButton("📖 How to Use", url="https://t.me/dojutso")],
         [InlineKeyboardButton("🔙 Back", callback_data="main_menu")]
     ]
@@ -48,10 +48,24 @@ def settings_keyboard(use_multiple=False, use_forward=False, auto_reply=False, a
          InlineKeyboardButton("📱📱 Multiple Accounts", callback_data="multiple_mode")],
         [InlineKeyboardButton("📊 Statistics", callback_data="statistics")],
         [InlineKeyboardButton(f"✉️ Direct {forward_mode} [{forward_status}]", callback_data="toggle_forward_mode")],
-        [InlineKeyboardButton(f"💬 Auto Reply to DMs [{auto_reply_status}]", callback_data="toggle_auto_reply")],
+        [InlineKeyboardButton(f"💬 Auto Reply [{auto_reply_status}]", callback_data="auto_reply_menu")],
         [InlineKeyboardButton(f"🔗 Auto Group Join [{auto_join_status}]", callback_data="toggle_auto_group_join")],
         [InlineKeyboardButton("🎯 Targeting", callback_data="target_adv")],
         [InlineKeyboardButton("🔙 Back", callback_data="main_menu")]
+    ]
+    return InlineKeyboardMarkup(keyboard)
+
+def auto_reply_settings_keyboard(auto_reply_enabled=False):
+    status = "🟢 ON" if auto_reply_enabled else "🔴 OFF"
+    toggle_text = "🔴 Turn OFF" if auto_reply_enabled else "🟢 Turn ON"
+    
+    keyboard = [
+        [InlineKeyboardButton(f"{toggle_text}", callback_data="toggle_auto_reply")],
+        [InlineKeyboardButton("📝 Set Default Text", callback_data="set_default_reply")],
+        [InlineKeyboardButton("➕ Add Reply Text", callback_data="add_reply_text")],
+        [InlineKeyboardButton("🗑️ Delete Text", callback_data="delete_reply_text")],
+        [InlineKeyboardButton("👁️ View Text", callback_data="view_reply_text")],
+        [InlineKeyboardButton("🔙 Back", callback_data="settings")]
     ]
     return InlineKeyboardMarkup(keyboard)
 
@@ -210,6 +224,10 @@ def back_to_menu_keyboard():
 
 def back_to_settings_keyboard():
     keyboard = [[InlineKeyboardButton("🔙 Back", callback_data="settings")]]
+    return InlineKeyboardMarkup(keyboard)
+
+def back_to_auto_reply_keyboard():
+    keyboard = [[InlineKeyboardButton("🔙 Back", callback_data="auto_reply_menu")]]
     return InlineKeyboardMarkup(keyboard)
 
 def ad_text_menu_keyboard():

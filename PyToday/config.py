@@ -4,10 +4,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-MONGODB_URI = os.getenv("MONGODB_URI", "mongodb+srv://PythonToday:JXTg6cIx7tAhOJBk@cluster0.obhmjth.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-BOT_TOKEN = os.getenv("BOT_TOKEN", "8182756461:AAGjeLRl74ImXZEsFbfGauxbWg0UxMOwTYQ")
+MONGODB_URI = os.getenv("MONGODB_URI", "")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "")
 
-ENCRYPTION_KEY = os.getenv("ENCRYPTION_KEY", "a7e5f2d8c9b1a0f3e4d2c8b7a6f5e1d3c9a8b7f6e5d4c3b2a1f0e9d8c7b6a5")
+ENCRYPTION_KEY = os.getenv("ENCRYPTION_KEY", "")
 if not ENCRYPTION_KEY:
     ENCRYPTION_KEY = secrets.token_urlsafe(32)
     print("WARNING: ENCRYPTION_KEY not set. Generated a random key for this session.")
