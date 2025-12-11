@@ -9,7 +9,6 @@ from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.types import Channel, Chat, InputPeerChannel, InputPeerSelf
 from telethon.errors import SessionPasswordNeededError, PhoneCodeInvalidError, PhoneCodeExpiredError, PasswordHashInvalidError, UserAlreadyParticipantError, InviteHashExpiredError, InviteHashInvalidError
 from datetime import datetime
-from bson import ObjectId
 from PyToday import database
 from PyToday.encryption import encrypt_data, decrypt_data
 from PyToday import config
@@ -132,7 +131,7 @@ async def verify_2fa_password(api_id, api_hash, password, session_string):
 async def get_groups_and_marketplaces(account_id):
     try:
         if isinstance(account_id, str):
-            account_id = ObjectId(account_id)
+            account_id = int(account_id)
         account = await database.get_account(account_id)
         if not account or not account.get('is_logged_in'):
             return {"success": False, "error": "Account not logged in"}
@@ -209,7 +208,7 @@ async def get_groups_and_marketplaces(account_id):
 async def get_saved_message_id(account_id):
     try:
         if isinstance(account_id, str):
-            account_id = ObjectId(account_id)
+            account_id = int(account_id)
         account = await database.get_account(account_id)
         if not account or not account.get('is_logged_in'):
             return None
@@ -240,7 +239,7 @@ async def get_saved_message_id(account_id):
 async def forward_from_saved_messages(account_id, chat_id, access_hash=None):
     try:
         if isinstance(account_id, str):
-            account_id = ObjectId(account_id)
+            account_id = int(account_id)
         account = await database.get_account(account_id)
         if not account or not account.get('is_logged_in'):
             return {"success": False, "error": "Account not logged in"}
@@ -289,7 +288,7 @@ async def forward_from_saved_messages(account_id, chat_id, access_hash=None):
 async def send_message_to_chat(account_id, chat_id, message, access_hash=None, use_forward=False):
     try:
         if isinstance(account_id, str):
-            account_id = ObjectId(account_id)
+            account_id = int(account_id)
         account = await database.get_account(account_id)
         if not account or not account.get('is_logged_in'):
             return {"success": False, "error": "Account not logged in"}
@@ -337,7 +336,7 @@ async def send_message_to_chat(account_id, chat_id, message, access_hash=None, u
 async def save_message_to_saved(account_id, message):
     try:
         if isinstance(account_id, str):
-            account_id = ObjectId(account_id)
+            account_id = int(account_id)
         account = await database.get_account(account_id)
         if not account or not account.get('is_logged_in'):
             return {"success": False, "error": "Account not logged in"}
@@ -366,7 +365,7 @@ async def save_message_to_saved(account_id, message):
 async def forward_message_to_chat(account_id, chat_id, from_peer, message_id, access_hash=None):
     try:
         if isinstance(account_id, str):
-            account_id = ObjectId(account_id)
+            account_id = int(account_id)
         account = await database.get_account(account_id)
         if not account or not account.get('is_logged_in'):
             return {"success": False, "error": "Account not logged in"}
@@ -407,7 +406,7 @@ async def broadcast_to_target_groups(account_id, target_groups, message, delay=6
     failed = 0
     
     if isinstance(account_id, str):
-        account_id = ObjectId(account_id)
+        account_id = int(account_id)
     
     for group in target_groups:
         try:
@@ -466,7 +465,7 @@ async def broadcast_message(account_id, message, delay=60, use_forward=False):
             failed += 1
     
     if isinstance(account_id, str):
-        account_id = ObjectId(account_id)
+        account_id = int(account_id)
     await database.create_or_update_stats(account_id, last_broadcast=datetime.utcnow())
     
     return {
@@ -566,7 +565,7 @@ async def update_account_name(api_id, api_hash, session_string, first_name, last
 async def join_group_by_link(account_id, invite_link):
     try:
         if isinstance(account_id, str):
-            account_id = ObjectId(account_id)
+            account_id = int(account_id)
         account = await database.get_account(account_id)
         if not account or not account.get('is_logged_in'):
             return {"success": False, "error": "Account not logged in"}
@@ -632,7 +631,7 @@ async def join_group_by_link(account_id, invite_link):
 async def send_auto_reply(account_id, to_user_id, reply_text):
     try:
         if isinstance(account_id, str):
-            account_id = ObjectId(account_id)
+            account_id = int(account_id)
         
         already_replied = await database.has_replied_to_user(account_id, to_user_id)
         if already_replied:
@@ -696,7 +695,7 @@ async def apply_profile_changes(api_id, api_hash, session_string):
 async def start_auto_reply_listener(account_id, user_id, reply_text):
     try:
         if isinstance(account_id, str):
-            account_id = ObjectId(account_id)
+            account_id = int(account_id)
         
         account = await database.get_account(account_id)
         if not account or not account.get('is_logged_in'):

@@ -15,7 +15,7 @@ from PyToday.keyboards import (
     accounts_menu_keyboard, support_keyboard, target_adv_keyboard,
     selected_groups_keyboard, target_groups_list_keyboard, remove_groups_keyboard,
     single_account_selection_keyboard, auto_reply_settings_keyboard,
-    back_to_auto_reply_keyboard
+    back_to_auto_reply_keyboard, force_sub_keyboard, force_sub_join_keyboard
 )
 from PyToday import telethon_handler
 from PyToday import config
@@ -24,29 +24,29 @@ logger = logging.getLogger(__name__)
 user_states = {}
 
 WELCOME_TEXT_TEMPLATE = """
-<b>🤖 ᴛᴇʟᴇɢʀᴀᴍ ᴀᴅ ʙᴏᴛ</b>
+<b>◈ ᴛᴇʟᴇɢʀᴀᴍ ᴀᴅ ʙᴏᴛ ◈</b>
 
-<blockquote>👋 <b>Welcome,</b> <code>{first_name}</code>
-👥 <b>Users:</b> <code>{total_users}</code></blockquote>
+<blockquote>▸ <b>ᴡᴇʟᴄᴏᴍᴇ,</b> <code>{first_name}</code>
+▸ <b>ᴜsᴇʀs:</b> <code>{total_users}</code></blockquote>
 
-<blockquote expandable>📢 Auto Advertising
-💬 Auto Reply to DMs
-🔗 Auto Group Join
-📊 Statistics Tracking
-📱 Multi-Account Support
-⏱️ Scheduled Sending</blockquote>
+<blockquote expandable>» ᴀᴜᴛᴏ ᴀᴅᴠᴇʀᴛɪsɪɴɢ
+» ᴀᴜᴛᴏ ʀᴇᴘʟʏ ᴛᴏ ᴅᴍs
+» ᴀᴜᴛᴏ ɢʀᴏᴜᴘ ᴊᴏɪɴ
+» sᴛᴀᴛɪsᴛɪᴄs ᴛʀᴀᴄᴋɪɴɢ
+» ᴍᴜʟᴛɪ-ᴀᴄᴄᴏᴜɴᴛ sᴜᴘᴘᴏʀᴛ
+» sᴄʜᴇᴅᴜʟᴇᴅ sᴇɴᴅɪɴɢ</blockquote>
 
-<i>Select an option:</i>
+<i>sᴇʟᴇᴄᴛ ᴀɴ ᴏᴘᴛɪᴏɴ:</i>
 """
 
 MENU_TEXT_TEMPLATE = """
-<b>🤖 ᴛᴇʟᴇɢʀᴀᴍ ᴀᴅ ʙᴏᴛ</b>
+<b>◈ ᴛᴇʟᴇɢʀᴀᴍ ᴀᴅ ʙᴏᴛ ◈</b>
 
 ━━━━━━━━━━━━━━━━━━
-<blockquote>👥 <b>Total Users:</b> <code>{total_users}</code></blockquote>
+<blockquote>◉ <b>ᴛᴏᴛᴀʟ ᴜsᴇʀs:</b> <code>{total_users}</code></blockquote>
 ━━━━━━━━━━━━━━━━━━
 
-<i>Select an option below:</i>
+<i>sᴇʟᴇᴄᴛ ᴀɴ ᴏᴘᴛɪᴏɴ ʙᴇʟᴏᴡ:</i>
 """
 
 async def safe_edit_message(query, text, parse_mode="HTML", reply_markup=None):
@@ -92,12 +92,12 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     if config.ADMIN_ONLY_MODE and not is_admin(user.id):
         private_text = """
-<b>⚠️ ᴘʀɪᴠᴀᴛᴇ ʙᴏᴛ</b>
+<b>⊘ ᴘʀɪᴠᴀᴛᴇ ʙᴏᴛ</b>
 
-<blockquote><i>This bot is for personal use only.</i>
-<i>Contact the admin for access.</i></blockquote>
+<blockquote><i>ᴛʜɪs ʙᴏᴛ ɪs ғᴏʀ ᴘᴇʀsᴏɴᴀʟ ᴜsᴇ ᴏɴʟʏ.</i>
+<i>ᴄᴏɴᴛᴀᴄᴛ ᴛʜᴇ ᴀᴅᴍɪɴ ғᴏʀ ᴀᴄᴄᴇss.</i></blockquote>
 
-👨‍💻 <a href="tg://user?id=7756391784">Contact Admin</a>
+◈ <a href="tg://user?id=7756391784">ᴄᴏɴᴛᴀᴄᴛ ᴀᴅᴍɪɴ</a>
 """
         try:
             await update.message.reply_photo(
@@ -138,15 +138,15 @@ async def broadcast_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.effective_user
     
     if not is_admin(user.id):
-        await update.message.reply_text("<b>⚠️ This command is only for admins.</b>", parse_mode="HTML")
+        await update.message.reply_text("<b>⊘ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪs ᴏɴʟʏ ғᴏʀ ᴀᴅᴍɪɴs.</b>", parse_mode="HTML")
         return
     
     if not context.args and not update.message.reply_to_message:
         await update.message.reply_text(
-            "<b>📢 ʙʀᴏᴀᴅᴄᴀsᴛ ᴄᴏᴍᴍᴀɴᴅ</b>\n\n"
-            "<blockquote>Reply to a message or send:\n"
+            "<b>◈ ʙʀᴏᴀᴅᴄᴀsᴛ ᴄᴏᴍᴍᴀɴᴅ</b>\n\n"
+            "<blockquote>ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴏʀ sᴇɴᴅ:\n"
             "<code>/broadcast Your message here</code></blockquote>\n\n"
-            "<i>Supports: Text, Photo, Video, Document, Audio</i>",
+            "<i>sᴜᴘᴘᴏʀᴛs: ᴛᴇxᴛ, ᴘʜᴏᴛᴏ, ᴠɪᴅᴇᴏ, ᴅᴏᴄᴜᴍᴇɴᴛ, ᴀᴜᴅɪᴏ</i>",
             parse_mode="HTML"
         )
         return
@@ -158,10 +158,10 @@ async def broadcast_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     failed = 0
     
     status_msg = await update.message.reply_text(
-        f"<b>📤 Broadcasting...</b>\n\n"
-        f"👥 Total: <code>{len(all_users)}</code>\n"
-        f"✅ Sent: <code>0</code>\n"
-        f"❌ Failed: <code>0</code>",
+        f"<b>▸ ʙʀᴏᴀᴅᴄᴀsᴛɪɴɢ...</b>\n\n"
+        f"◉ ᴛᴏᴛᴀʟ: <code>{len(all_users)}</code>\n"
+        f"● sᴇɴᴛ: <code>0</code>\n"
+        f"○ ғᴀɪʟᴇᴅ: <code>0</code>",
         parse_mode="HTML"
     )
     
@@ -229,10 +229,10 @@ async def broadcast_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if (sent + failed) % 10 == 0:
             try:
                 await status_msg.edit_text(
-                    f"<b>📤 Broadcasting...</b>\n\n"
-                    f"👥 Total: <code>{len(all_users)}</code>\n"
-                    f"✅ Sent: <code>{sent}</code>\n"
-                    f"❌ Failed: <code>{failed}</code>",
+                    f"<b>▸ ʙʀᴏᴀᴅᴄᴀsᴛɪɴɢ...</b>\n\n"
+                    f"◉ ᴛᴏᴛᴀʟ: <code>{len(all_users)}</code>\n"
+                    f"● sᴇɴᴛ: <code>{sent}</code>\n"
+                    f"○ ғᴀɪʟᴇᴅ: <code>{failed}</code>",
                     parse_mode="HTML"
                 )
             except:
@@ -244,10 +244,10 @@ async def broadcast_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         del user_states[user.id]
     
     await status_msg.edit_text(
-        f"<b>✅ ʙʀᴏᴀᴅᴄᴀsᴛ ᴄᴏᴍᴘʟᴇᴛᴇ</b>\n\n"
-        f"👥 Total: <code>{len(all_users)}</code>\n"
-        f"✅ Sent: <code>{sent}</code>\n"
-        f"❌ Failed: <code>{failed}</code>",
+        f"<b>✓ ʙʀᴏᴀᴅᴄᴀsᴛ ᴄᴏᴍᴘʟᴇᴛᴇ</b>\n\n"
+        f"◉ ᴛᴏᴛᴀʟ: <code>{len(all_users)}</code>\n"
+        f"● sᴇɴᴛ: <code>{sent}</code>\n"
+        f"○ ғᴀɪʟᴇᴅ: <code>{failed}</code>",
         parse_mode="HTML"
     )
 
@@ -269,7 +269,7 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if data == "twofa_cancel":
         if user_id in user_states:
             del user_states[user_id]
-        await send_new_message(query, "<b>❌ 2FA verification cancelled.</b>\n\n<blockquote><i>Returning to main menu...</i></blockquote>", main_menu_keyboard())
+        await send_new_message(query, "<b>✕ 2ғᴀ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴄᴀɴᴄᴇʟʟᴇᴅ.</b>\n\n<blockquote><i>ʀᴇᴛᴜʀɴɪɴɢ ᴛᴏ ᴍᴀɪɴ ᴍᴇɴᴜ...</i></blockquote>", main_menu_keyboard())
         return
     
     if data == "main_menu":
@@ -420,7 +420,7 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         context.user_data["advertising_active"] = False
         await send_new_message(
             query,
-            "<b>🛑 ᴀᴅᴠᴇʀᴛɪsɪɴɢ sᴛᴏᴘᴘᴇᴅ</b>\n\n<blockquote>✅ <i>Your campaign has been stopped successfully.</i></blockquote>",
+            "<b>▣ ᴀᴅᴠᴇʀᴛɪsɪɴɢ sᴛᴏᴘᴘᴇᴅ</b>\n\n<blockquote>✓ <i>ʏᴏᴜʀ ᴄᴀᴍᴘᴀɪɢɴ ʜᴀs ʙᴇᴇɴ sᴛᴏᴘᴘᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ.</i></blockquote>",
             advertising_menu_keyboard()
         )
     
@@ -478,29 +478,29 @@ async def show_main_menu(query, context=None):
 
 async def show_advertising_menu(query):
     adv_text = """
-<b>📢 ᴀᴅᴠᴇʀᴛɪsɪɴɢ ᴍᴇɴᴜ</b>
+<b>◈ ᴀᴅᴠᴇʀᴛɪsɪɴɢ ᴍᴇɴᴜ</b>
 
 ━━━━━━━━━━━━━━━━━━
-<blockquote>🚀 <b>Start</b> - Begin advertising
-🛑 <b>Stop</b> - Stop advertising
-⏱️ <b>Set Time</b> - Change interval</blockquote>
+<blockquote>» <b>sᴛᴀʀᴛ</b> - ʙᴇɢɪɴ ᴀᴅᴠᴇʀᴛɪsɪɴɢ
+▣ <b>sᴛᴏᴘ</b> - sᴛᴏᴘ ᴀᴅᴠᴇʀᴛɪsɪɴɢ
+◴ <b>sᴇᴛ ᴛɪᴍᴇ</b> - ᴄʜᴀɴɢᴇ ɪɴᴛᴇʀᴠᴀʟ</blockquote>
 ━━━━━━━━━━━━━━━━━━
 
-<i>Select an option:</i>
+<i>sᴇʟᴇᴄᴛ ᴀɴ ᴏᴘᴛɪᴏɴ:</i>
 """
     await send_new_message(query, adv_text, advertising_menu_keyboard())
 
 async def show_accounts_menu(query):
     acc_text = """
-<b>👤 ᴀᴄᴄᴏᴜɴᴛs ᴍᴇɴᴜ</b>
+<b>◈ ᴀᴄᴄᴏᴜɴᴛs ᴍᴇɴᴜ</b>
 
 ━━━━━━━━━━━━━━━━━━
-<blockquote>➕ <b>Add</b> - Add new account
-🗑️ <b>Delete</b> - Remove account
-📋 <b>My Accounts</b> - View all</blockquote>
+<blockquote>＋ <b>ᴀᴅᴅ</b> - ᴀᴅᴅ ɴᴇᴡ ᴀᴄᴄᴏᴜɴᴛ
+✕ <b>ᴅᴇʟᴇᴛᴇ</b> - ʀᴇᴍᴏᴠᴇ ᴀᴄᴄᴏᴜɴᴛ
+≡ <b>ᴍʏ ᴀᴄᴄᴏᴜɴᴛs</b> - ᴠɪᴇᴡ ᴀʟʟ</blockquote>
 ━━━━━━━━━━━━━━━━━━
 
-<i>Select an option:</i>
+<i>sᴇʟᴇᴄᴛ ᴀɴ ᴏᴘᴛɪᴏɴ:</i>
 """
     await send_new_message(query, acc_text, accounts_menu_keyboard())
 
