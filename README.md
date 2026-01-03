@@ -1,11 +1,11 @@
 <div align="center">
 
-<img src="https://i.ibb.co/p6mFW8JQ/file-3545.jpg" width="100%" style="border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.45);" />
+<img src="https://i.ibb.co/k2Rgc9cN/file-3769.jpg" width="100%" style="border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,0.5);" />
 
 <br><br>
 
 # 🚀 **ᴛᴇʟᴇɢʀᴀᴍ ᴀᴅ ʙᴏᴛ**
-### ᴘʀᴏғᴇssɪᴏɴᴀʟ ᴍᴜʟᴛɪ-ᴀᴄᴄᴏᴜɴᴛ ᴀᴅᴠᴇʀᴛɪsɪɴɢ sʏsᴛᴇᴍ
+### ✨ ᴘʀᴏғᴇssɪᴏɴᴀʟ · ᴍᴜʟᴛɪ-ᴀᴄᴄᴏᴜɴᴛ · ᴀᴜᴛᴏᴍᴀᴛᴇᴅ ✨
 
 <br>
 
@@ -14,8 +14,10 @@
     <img src="https://img.shields.io/badge/ᴊᴏɪɴ-ᴛᴇʟᴇɢʀᴀᴍ-blue?style=for-the-badge&logo=telegram&logoColor=white">
   </a>
   <img src="https://img.shields.io/badge/ᴘʏᴛʜᴏɴ-3.10+-yellow?style=for-the-badge&logo=python">
-  <img src="https://img.shields.io/badge/sᴛᴀᴛᴜs-ᴀᴄᴛɪᴠᴇ-success?style=for-the-badge">
+  <img src="https://img.shields.io/badge/sᴛᴀᴛᴜs-ʟɪᴠᴇ-success?style=for-the-badge">
 </p>
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3000&pause=800&color=2CA5E0&center=true&vCenter=true&width=500&lines=ɴᴇxᴛ-ɢᴇɴ+ᴛᴇʟᴇɢʀᴀᴍ+ᴀᴅ+ᴀᴜᴛᴏᴍᴀᴛɪᴏɴ;ʙᴜɪʟᴛ+ғᴏʀ+ᴘʀᴏғᴇssɪᴏɴᴀʟs;ғᴀsᴛ+·+sᴇᴄᴜʀᴇ+·+sᴄᴀʟᴀʙʟᴇ" />
 
 </div>
 
@@ -23,60 +25,52 @@
 
 ## 🎯 ᴏᴠᴇʀᴠɪᴇᴡ
 
-ᴀ ɴᴇxᴛ-ɢᴇɴ **ᴛᴇʟᴇɢʀᴀᴍ ᴀᴜᴛᴏ ᴀᴅᴠᴇʀᴛɪsɪɴɢ ʙᴏᴛ**  
-ʙᴜɪʟᴛ ғᴏʀ ᴘʀᴏғᴇssɪᴏɴᴀʟs ᴛᴏ ᴀᴜᴛᴏᴍᴀᴛᴇ, ᴍᴀɴᴀɢᴇ & sᴄᴀʟᴇ ᴛᴇʟᴇɢʀᴀᴍ ᴀᴅs.
-
-| ғᴇᴀᴛᴜʀᴇ | ᴅᴇsᴄʀɪᴘᴛɪᴏɴ |
-|---------|-------------|
-| ◆ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs | ᴍᴀɴᴀɢᴇ ᴍᴜʟᴛɪᴘʟᴇ ᴀᴄᴄᴏᴜɴᴛs |
-| ◆ ᴀᴜᴛᴏ-ᴀᴅs | sᴇɴᴅ ᴛᴏ ɢʀᴏᴜᴘs & ᴍᴀʀᴋᴇᴛᴘʟᴀᴄᴇs |
-| ◆ 2ғᴀ ʟᴏɢɪɴ | sᴇᴄᴜʀᴇ ᴀᴜᴛʜᴇɴᴛɪᴄᴀᴛɪᴏɴ |
-| ◆ ᴍᴏɴɢᴏᴅʙ | sᴇssɪᴏɴ sᴛᴏʀᴀɢᴇ |
-| ◆ ғᴏʀᴡᴀʀᴅ ᴍᴏᴅᴇ | ᴘʀᴇᴍɪᴜᴍ ᴇᴍᴏᴊɪs ᴘʀᴇsᴇʀᴠᴇᴅ |
-| ◆ ᴀᴜᴛᴏ ʀᴇᴘʟʏ | ᴅᴍ ᴀᴜᴛᴏ-ʀᴇsᴘᴏɴᴅᴇʀ |
-| ◆ ᴀᴜᴛᴏ ᴊᴏɪɴ | ᴀᴜᴛᴏᴍᴀᴛɪᴄ ɢʀᴏᴜᴘ ᴊᴏɪɴɪɴɢ |
-| ◆ ʙʀᴏᴀᴅᴄᴀsᴛ | sᴇɴᴅ ᴛᴏ ᴀʟʟ ᴜsᴇʀs |
+ᴀ **ɴᴇxᴛ-ɢᴇɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀᴜᴛᴏ ᴀᴅᴠᴇʀᴛɪsɪɴɢ ʙᴏᴛ**  
+ᴅᴇsɪɢɴᴇᴅ ғᴏʀ **ᴀɢᴇɴᴄɪᴇs, ᴍᴀʀᴋᴇᴛᴇʀs & ɢʀᴏᴡᴛʜ sᴇʀᴠɪᴄᴇs**  
+ᴛᴏ ᴀᴜᴛᴏᴍᴀᴛᴇ, ᴍᴀɴᴀɢᴇ & sᴄᴀʟᴇ ᴀᴅs ᴡɪᴛʜ ᴢᴇʀᴏ ʜᴀssʟᴇ.
 
 ---
 
-## ⚡ ᴋᴇʏ ғᴇᴀᴛᴜʀᴇs
+## ⚡ ғᴇᴀᴛᴜʀᴇs ᴀᴛ ᴀ ɢʟᴀɴᴄᴇ
 
-### 🤖 ᴀᴄᴄᴏᴜɴᴛ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ
+| ✦ ғᴇᴀᴛᴜʀᴇ | ✦ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ |
+|-----------|---------------|
+| ♾ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs | ᴍᴜʟᴛɪ-ᴀᴄᴄᴏᴜɴᴛ ᴄᴏɴᴛʀᴏʟ |
+| 📢 ᴀᴜᴛᴏ ᴀᴅs | ɢʀᴏᴜᴘs & ᴍᴀʀᴋᴇᴛᴘʟᴀᴄᴇs |
+| 🔐 2ғᴀ ʟᴏɢɪɴ | ᴇɴʜᴀɴᴄᴇᴅ sᴇᴄᴜʀɪᴛʏ |
+| 💾 ᴍᴏɴɢᴏᴅʙ | sᴇssɪᴏɴ sᴛᴏʀᴀɢᴇ |
+| 🔁 ғᴏʀᴡᴀʀᴅ ᴍᴏᴅᴇ | ᴘʀᴇᴍɪᴜᴍ ᴇᴍᴏᴊɪs sᴀғᴇ |
+| 💬 ᴀᴜᴛᴏ ʀᴇᴘʟʏ | ᴅᴍ ᴀᴜᴛᴏ-ʀᴇsᴘᴏɴᴅᴇʀ |
+| 🚀 ᴀᴜᴛᴏ ᴊᴏɪɴ | sᴍᴀʀᴛ ɢʀᴏᴜᴘ ᴊᴏɪɴ |
+| 📡 ʙʀᴏᴀᴅᴄᴀsᴛ | ᴀʟʟ ᴜsᴇʀs |
+
+---
+
+## 🤖 ᴀᴄᴄᴏᴜɴᴛ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ
 
 ➤ ᴜɴʟɪᴍɪᴛᴇᴅ ᴛᴇʟᴇᴛʜᴏɴ sᴇssɪᴏɴs
 ➤ 2ғᴀ sᴇᴄᴜʀᴇ ʟᴏɢɪɴ
-➤ ᴀᴜᴛᴏ-ʀᴇᴄᴏɴɴᴇᴄᴛ
-➤ ɪɴsᴛᴀɴᴛ ᴀᴄᴄᴏᴜɴᴛ sᴡɪᴛᴄʜɪɴɢ
+➤ ᴀᴜᴛᴏ-ʀᴇᴄᴏɴɴᴇᴄᴛ sʏsᴛᴇᴍ
+➤ ɪɴsᴛᴀɴᴛ sᴡɪᴛᴄʜɪɴɢ
 ➤ ᴀᴇs-ᴇɴᴄʀʏᴘᴛᴇᴅ sᴛᴏʀᴀɢᴇ
-
-### 📢 ᴀᴅᴠᴇʀᴛɪsɪɴɢ ᴇɴɢɪɴᴇ
-
-➣ sᴍᴀʀᴛ ᴀᴜᴛᴏ-ᴛᴀʀɢᴇᴛɪɴɢ
-➣ ᴛᴇxᴛ / ᴍᴇᴅɪᴀ / ʙᴜᴛᴛᴏɴs
-➣ ᴀᴅᴊᴜsᴛᴀʙʟᴇ ᴅᴇʟᴀʏ
-➣ ᴅɪʀᴇᴄᴛ sᴇɴᴅ & ғᴏʀᴡᴀʀᴅ
-
-### 💬 ᴀᴜᴛᴏ ғᴇᴀᴛᴜʀᴇs
-
-✦ ᴀᴜᴛᴏ ʀᴇᴘʟʏ ᴛᴏ ᴅᴍs
-✦ ᴀᴜᴛᴏ ɢʀᴏᴜᴘ ᴊᴏɪɴ
-✦ ʙʀᴏᴀᴅᴄᴀsᴛ ᴛᴏ ᴀʟʟ ᴜsᴇʀs
-✦ ᴀᴅᴍɪɴ-ᴏɴʟʏ ᴍᴏᴅᴇ
 
 ---
 
-## 🏗 ᴘʀᴏᴊᴇᴄᴛ sᴛʀᴜᴄᴛᴜʀᴇ
+## 📢 ᴀᴅᴠᴇʀᴛɪsɪɴɢ ᴇɴɢɪɴᴇ
 
-📦 Telegram-Ad-Bot
-├── main.py
-├── requirements.txt
-└── PyToday/
-├── config.py
-├── database.py
-├── encryption.py
-├── handlers.py
-├── keyboards.py
-└── telethon_handler.py
+➣ sᴍᴀʀᴛ ᴀᴜᴛᴏ-ᴛᴀʀɢᴇᴛɪɴɢ
+➣ ᴛᴇxᴛ · ᴍᴇᴅɪᴀ · ʙᴜᴛᴛᴏɴs
+➣ ᴀᴅᴊᴜsᴛᴀʙʟᴇ ᴅᴇʟᴀʏ
+➣ ᴅɪʀᴇᴄᴛ sᴇɴᴅ & ғᴏʀᴡᴀʀᴅ
+
+---
+
+## 💬 ᴀᴜᴛᴏ ᴇɴɢᴀɢᴇᴍᴇɴᴛ
+
+✦ ᴀᴜᴛᴏ ʀᴇᴘʟʏ ᴛᴏ ᴅᴍs
+✦ ᴀᴜᴛᴏ ɢʀᴏᴜᴘ ᴊᴏɪɴ
+✦ ʙʀᴏᴀᴅᴄᴀsᴛ ᴛᴏ ᴀʟʟ
+✦ ᴀᴅᴍɪɴ-ᴏɴʟʏ ᴍᴏᴅᴇ
 
 ---
 
@@ -84,10 +78,10 @@
 
 | ᴠᴀʀɪᴀʙʟᴇ | ᴅᴇsᴄʀɪᴘᴛɪᴏɴ |
 |----------|-------------|
-| `BOT_TOKEN` | Telegram Bot Token |
-| `MONGODB_URI` | MongoDB Connection |
-| `ADMIN_USER_IDS` | Admin User IDs |
-| `AUTO_REPLY_TEXT` | Auto Reply Message |
+| `BOT_TOKEN` | ᴛᴇʟᴇɢʀᴀᴍ ʙᴏᴛ ᴛᴏᴋᴇɴ |
+| `MONGODB_URI` | ᴍᴏɴɢᴏᴅʙ ᴄᴏɴɴᴇᴄᴛɪᴏɴ |
+| `ADMIN_USER_IDS` | ᴀᴅᴍɪɴ ɪᴅs |
+| `AUTO_REPLY_TEXT` | ᴀᴜᴛᴏ ʀᴇᴘʟʏ ᴍᴇssᴀɢᴇ |
 
 ---
 
@@ -101,7 +95,7 @@
 
 <br><br>
 
-### 👨‍💻 Developer — **Addy**
+### 👨‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ — **ᴀᴅᴅʏ**
 
 <a href="https://github.com/PythonTodayz">
 <img src="https://img.shields.io/badge/GitHub-Addy-181717?style=for-the-badge&logo=github">
@@ -109,9 +103,9 @@
 
 ---
 
-### 📝 License
-**MIT License** — Free for personal & commercial use.
+### 📝 ʟɪᴄᴇɴsᴇ
+**ᴍɪᴛ ʟɪᴄᴇɴsᴇ** — ғʀᴇᴇ ғᴏʀ ᴘᴇʀsᴏɴᴀʟ & ᴄᴏᴍᴍᴇʀᴄɪᴀʟ ᴜsᴇ.
 
-⭐ If you like this project, give it a **star**!
+⭐ ɪғ ʏᴏᴜ ʟɪᴋᴇ ɪᴛ, ɢɪᴠᴇ ᴀ **sᴛᴀʀ**!
 
 </div>
