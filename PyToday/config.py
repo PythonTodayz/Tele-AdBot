@@ -23,19 +23,19 @@ SESSIONS_DIR = "sessions"
 os.makedirs(SESSIONS_DIR, exist_ok=True)
 
 # Bot Info
-BOT_USERNAME = os.getenv("BOT_USERNAME", "PyToday Adbot")
-ACCOUNT_NAME_SUFFIX = os.getenv("ACCOUNT_NAME_SUFFIX", "PyAds")
-ACCOUNT_BIO_TEMPLATE = os.getenv("ACCOUNT_BIO_TEMPLATE", "Smart Ads")
+BOT_USERNAME = os.getenv("BOT_USERNAME", "")
+ACCOUNT_NAME_SUFFIX = os.getenv("ACCOUNT_NAME_SUFFIX", "")
+ACCOUNT_BIO_TEMPLATE = os.getenv("ACCOUNT_BIO_TEMPLATE", "")
 
 # Media
-START_IMAGE_URL = os.getenv("START_IMAGE_URL", "https://i.ibb.co/p6mFW8JQ/file-3545.jpg")
+START_IMAGE_URL = os.getenv("START_IMAGE_URL", "")
 
 # Admin Only Mode
 ADMIN_ONLY_MODE = os.getenv("ADMIN_ONLY_MODE", "False").lower() == "true"
 
 # Auto Reply Configuration
 AUTO_REPLY_ENABLED = os.getenv("AUTO_REPLY_ENABLED", "False").lower() == "true"
-AUTO_REPLY_TEXT = os.getenv("AUTO_REPLY_TEXT", "I'm currently unavailable. Go ahead and send your message, I will reply as soon as I can.")
+AUTO_REPLY_TEXT = os.getenv("AUTO_REPLY_TEXT", "")
 
 # Auto Group Join Configuration
 AUTO_GROUP_JOIN_ENABLED = os.getenv("AUTO_GROUP_JOIN_ENABLED", "False").lower() == "true"
