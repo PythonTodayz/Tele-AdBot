@@ -236,7 +236,7 @@ cp sample.env .env
 ### 1. ᴄʟᴏɴᴇ ᴛʜᴇ ʀᴇᴘᴏsɪᴛᴏʀʏ
 
 ```bash
-git clone https://github.com/yourusername/telegram-ad-bot.git
+git clone https://github.com/PythonTodayz/Tele-AdBot.git
 cd telegram-ad-bot
 ```
 
@@ -265,7 +265,7 @@ python main.py
 ## 📝 ʀᴇǫᴜɪʀᴇᴍᴇɴᴛs
 
 ```
-python-telegram-bot>=20.0
+python-telegram-bot
 telethon>=1.28.0
 motor>=3.0.0
 aiosqlite>=0.19.0
